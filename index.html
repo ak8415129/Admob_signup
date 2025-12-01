@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google AdMob - Monetize Your Apps</title>
+    
+    <!-- Google Fonts: Roboto (Standard fallback for Google Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <link href="/style.css" rel="stylesheet">
+
+    <!-- ================================================================== -->
+    <!-- GOOGLE ANALYTICS 4 IMPLEMENTATION                                  -->
+    <!-- IMPORTANT: Replace 'G-XXXXXXXXXX' with your actual Measurement ID  -->
+    <!-- ================================================================== -->
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WXZKHZLBHJs"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      // Replace G-XXXXXXXXXX with your actual GA4 Measurement ID
+      gtag('config', 'G-WXZKHZLBHJ');
+
+      /**
+       * Function to track the specific button click
+       * This sends a custom event named 'admob_signup_click' to GA4
+       */
+      function trackSignUpClick() {
+        console.log("Tracking event sent to GA4"); // Debugging log
+        
+        gtag('event', 'admob_signup_click', {
+            'event_category': 'engagement',
+            'event_label': 'hero_signup_button',
+            'transport_type': 'beacon'
+        });
+        
+        // Optional: Redirect after a short delay if you want to ensure the event sends,
+        // though 'transport_type: beacon' usually handles this safely.
+        return true;
+      }
+    </script>
+</head>
+<body class="bg-white font-sans text-google-gray antialiased">
+
+    <!-- Navigation Bar -->
+    <nav class="border-b border-gray-200 bg-white sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <!-- Google AdMob Logo Recreation -->
+                    <div class="flex-shrink-0 flex items-center gap-2">
+                        <svg class="h-8 w-auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.84z" fill="#FBBC05"/>
+                            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                        </svg>
+                        <span class="text-xl font-medium tracking-tight text-gray-600">
+                            AdMob <span class="text-gray-400 text-sm">by Google</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="https://admob.google.com/home/" class="text-sm font-medium text-gray-500 hover:text-gray-900 transition">Overview</a>
+                    <a href="https://support.google.com/admob/" class="text-sm font-medium text-gray-500 hover:text-gray-900 transition">Support</a>
+                    <a href="https://admob.google.com/home/get-started/" 
+                       onclick="trackSignUpClick()"
+                       class="ml-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded text-white bg-google-blue hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition shadow-sm">
+                        Sign up
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative overflow-hidden bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32 pt-20 px-4 sm:px-6 lg:px-8">
+                <main class="mt-10 mx-auto max-w-7xl sm:mt-12 md:mt-16 lg:mt-20 xl:mt-28">
+                    <div class="sm:text-center lg:text-left">
+                        <h1 class="text-4xl tracking-tight font-medium text-gray-900 sm:text-5xl md:text-6xl mb-6">
+                            <span class="block xl:inline">Monetize your apps</span>
+                            <span class="block text-google-blue">intelligently</span>
+                        </h1>
+                        <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0 font-light">
+                            Earn more from your mobile apps with high-quality ads, actionable analytics, and powerful automated tools. Join the community of developers building their businesses with Google AdMob.
+                        </p>
+                        <div class="mt-8 sm:mt-12 sm:flex sm:justify-center lg:justify-start">
+                            <div class="rounded-md shadow">
+                                <!-- MAIN TRACKING BUTTON -->
+                                <!-- 'onclick' triggers the GA4 event before navigation -->
+                                <a href="https://admob.google.com/home/get-started/" 
+                                   onclick="trackSignUpClick()"
+                                   target="_blank"
+                                   class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded bg-google-blue text-white hover:bg-blue-600 md:py-4 md:text-lg md:px-10 transition duration-150 ease-in-out">
+                                    Self Sign Up
+                                </a>
+                            </div>
+                            <!-- Learn more button removed as requested -->
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <!-- Decorative abstract shape typical of Google branding -->
+        <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 bg-gray-50 flex items-center justify-center">
+            <div class="relative w-full h-64 sm:h-72 md:h-96 lg:h-full flex items-center justify-center">
+                 <!-- Simple SVG Illustration of Mobile Analytics -->
+                 <svg class="w-2/3 h-auto opacity-90" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="50" y="40" width="120" height="220" rx="12" fill="white" stroke="#E5E7EB" stroke-width="4"/>
+                    <rect x="65" y="60" width="90" height="40" rx="4" fill="#E8F0FE"/>
+                    <rect x="65" y="110" width="90" height="8" rx="4" fill="#F3F4F6"/>
+                    <rect x="65" y="130" width="60" height="8" rx="4" fill="#F3F4F6"/>
+                    <rect x="65" y="160" width="90" height="60" rx="4" fill="#34A853" fill-opacity="0.1"/>
+                    <circle cx="110" cy="190" r="15" fill="#34A853"/>
+                    
+                    <rect x="200" y="80" width="150" height="140" rx="8" fill="white" stroke="#E5E7EB" stroke-width="4"/>
+                    <path d="M220 180 L250 150 L280 170 L330 110" stroke="#4285F4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="330" cy="110" r="6" fill="#4285F4"/>
+                    <rect x="220" y="110" width="40" height="10" rx="2" fill="#F3F4F6"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div id="features" class="py-16 bg-google-lightgray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-base text-google-blue font-semibold tracking-wide uppercase">Why AdMob?</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Smarter monetization for your apps
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    AdMob does the hard work for you, so you can focus on building great apps.
+                </p>
+            </div>
+
+            <div class="mt-14">
+                <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                    
+                    <!-- Card 1 -->
+                    <div class="bg-white overflow-hidden shadow rounded-lg hover:shadow-lg transition duration-300">
+                        <div class="p-6">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-google-blue mb-4">
+                                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg leading-6 font-medium text-gray-900">Maximize Revenue</h3>
+                            <p class="mt-2 text-base text-gray-500">
+                                Earn high CPMs with global advertiser demand and maximize your fill rate with AdMob's mediation platform.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-white overflow-hidden shadow rounded-lg hover:shadow-lg transition duration-300">
+                        <div class="p-6">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-green-100 text-google-green mb-4">
+                                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg leading-6 font-medium text-gray-900">Actionable Analytics</h3>
+                            <p class="mt-2 text-base text-gray-500">
+                                Seamlessly integrate with Google Analytics for Firebase to understand user behavior and lifetime value (LTV).
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-white overflow-hidden shadow rounded-lg hover:shadow-lg transition duration-300">
+                        <div class="p-6">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-100 text-yellow-600 mb-4">
+                                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-lg leading-6 font-medium text-gray-900">Automated Tools</h3>
+                            <p class="mt-2 text-base text-gray-500">
+                                Let AdMob handle the daily tasks with tools like Ad Network Optimization and simple setup flows.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Simple Footer -->
+    <footer class="bg-white border-t border-gray-200">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
+            <div class="flex justify-center space-x-6 md:order-2">
+                <a href="#" class="text-gray-400 hover:text-gray-500">
+                    <span class="sr-only">Privacy</span>
+                    Privacy
+                </a>
+                <a href="#" class="text-gray-400 hover:text-gray-500">
+                    <span class="sr-only">Terms</span>
+                    Terms
+                </a>
+            </div>
+            <div class="mt-8 md:mt-0 md:order-1">
+                <div class="flex items-center justify-center md:justify-start">
+                    <span class="text-2xl font-bold text-gray-500 mr-2">Google</span>
+                    <span class="text-base text-gray-400">&copy; 2025 Google AdMob Hackathon Team</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
